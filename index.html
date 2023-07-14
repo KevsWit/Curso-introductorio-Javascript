@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo del Baloncesto</title>
+  <script src="js/app.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="d-flex justify-content-center align-items-center">
+      <a class="nav-link" href="index.html">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="entrenamiento.html">Entrenamiento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="jugadores.html">Jugadores Líderes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="historia.html">Historia del baloncesto</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="jumbotron" style="padding: 10px;">
+      <h2 class="text-center">¡Bienvenido al mundo del baloncesto!</h2>
+      <p class="text-center">¡Aquí podrás encontrar información, noticias y diversión sobre baloncesto!</p>
+      <iframe width="100%" height="720" src="https://www.youtube.com/embed/CXLM08fZO5o" title="NBA Epic Moments" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section>
+      <h2 class="text-center"><b><i>Destacado</i></b></h2>
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/NBA_Playoffs.jpg" class="d-block w-100" alt="NBA Playoffs">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>2023 NBA Playoffs, Play-in Tournament</h5>
+              <p>Torneo de play-in, enfrentamientos de primera ronda y más</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/top_scorers.jpeg" class="d-block w-100" alt="Scoring Leaders">
+            <div class="carousel-caption d-none d-md-block" style="border: black; border-radius: 5px; background-color: black;">
+              <h5>Scoring Leaders</h5>
+              <p>¡Felicitaciones a Stephen Curry de los Warriors por pasar al puesto 15 de todos los tiempos en puntuación de Playoffs!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/final.jpg" class="d-block w-100" alt="NBA Playoffs Final">
+            <div class="carousel-caption d-none d-md-block" style="border: black; border-radius: 5px; background-color: black;">
+              <h5>NBA La Final entre Nuggets y Heat</h5>
+              <p>Los Denver Nuggets calificaron por primera vez en su historia a las Finales de la NBA, como líderes de la Conferencia Oeste, y enfrentarán al Miami Heat</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <section style="padding: 15px;">
+      <h2 class="text-center"><b>Lista de canciones</b></h2>
+      <div id="audio-player" class="text-center">
+        <i>Presiona la canción que desees escuchar...<br></i>
+        <audio id="audio" controls></audio>
+        <ul id="playlist" class="list-group">
+          <!-- Aquí generamos los elementos <li> en base a los elementos en el array 'playlist' -->
+        </ul>
+      </div>
+    </section>
+
+    <section style="border: black 10px; border-radius: 5px; padding: 10px; ">
+      <hr>
+      <h2 class="text-center"><i>----Encuesta----</i></h2>
+      <form id="encuesta-form" style="padding: 10px;">
+        <div class="form-group">
+          <label for="opinion">Comparte tu opinión:</label>
+          <textarea id="opinion" name="opinion" rows="4" cols="50" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="tiktok">Enlace de TikTok:</label>
+          <input type="text" id="tiktok" name="tiktok" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="instagram">Enlace de Instagram:</label>
+          <input type="text" id="instagram" name="instagram" class="form-control">
+        </div>
+
+        <a href="#" id="enviar-correo-link" class="btn btn-primary">Enviar correo</a>
+      </form>
+    </section>
+  </main>
+  <footer class="bg-dark text-white text-center py-3">
+    <p>Kevin Castillo &copy; 2023 Mundo del Baloncesto. Todos los derechos reservados.</p>
+  </footer>
+  <!-- Scripts JS de Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
